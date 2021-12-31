@@ -17,6 +17,7 @@ body {
   justify-content: space-between;
   min-width: 320px;
   min-height: 100vh;
+  font-family: "Segoe UI", Roboto, Oxygen, sans-serif;
   font-size: 18px;
   line-height: 1.5;
 }
@@ -36,4 +37,55 @@ body {
   font-weight: 300;
   line-height: 50px;
   color: #fff;
+}
+
+/*Main*/
+.section-avatar {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+.section {
+  width: calc(50% - 20px);
+  padding: 10px;
+  padding-bottom: 35px;
+  border-bottom: 1px solid #672f2f;
+}
+.section-profile {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+.section-profile-name{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.section-main-title {
+  position: relative;
+  font-size: 2.5rem;
+  color: #00adff;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 8px;
+  word-spacing: 2px;
+  margin: 20px 0;
+}
+.section-main-title::after{
+  content: "";
+  width: 130px;
+  height: 2px;
+  background-color: #00adff;
+  position: absolute;
+  left: 50%;
+  margin-left: -65px;
+  bottom: -22px;
+}
+.section-subtitle {
+  font-size: 1.8rem;
+  color: #00dcff;
+  text-transform: uppercase;
+  margin: 20px 0;
 }
