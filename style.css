@@ -11,6 +11,11 @@
   margin: 0 auto;
   min-height: 50px;
 }
+.main-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
 body {
   display: flex;
   flex-direction: column;
@@ -111,4 +116,9 @@ body {
 /*About*/
 .section p {
   margin-bottom: 10px;
+}
+.section-item span {
+  text-decoration: none;
+  color: #00adff;
+  transition: color 0.5s;
 }
