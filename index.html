@@ -83,12 +83,14 @@
           </p>
         </section>
         <section class="section" id="skills">
-          <div class="section-title"></div>
+          <div class="section-title">Skills</div>
           <ul class="section-list">
             <li class="section-item">HTML <span>(Preprocessor Pug)</span></li>
             <li class="section-item">CSS <span>(Preprocessor SCSS)</span></li>
             <li class="section-item">JavaScript <span>(Fundamentals)</span></li>
-            <li class="section-item">Version control <span>(Git (GitHub)</span></li>
+            <li class="section-item">
+              Version control <span>(Git (GitHub)</span>
+            </li>
             <li class="section-item">Module Bundlers <span>(Webpack)</span></li>
             <li class="section-item">Text editor <span>(VS Code)</span></li>
             <li class="section-item">Video editor <span>(Sony Vegas)</span></li>
@@ -97,20 +99,45 @@
           </ul>
         </section>
         <section class="section" id="code">
-          <div class="section-title"></div>
-          <ul class="section-list"></ul>
+          <div class="section-title">Code</div>
+          <ul class="section-list">
+            <pre
+              class="pre"
+            ><code>     const randomRGB = function randInt(min, max) {
+     const num = (max - min + 1) * Math.random() + min;
+     return Math.floor(num);
+   };
+   let rainbowForH1 = document.querySelectorAll("h1");
+   for (i = 0; i < rainbowForH1.length; i++) {
+     rainbowForH1[i].addEventListener("mouseover", function () {
+       this.style.background = `rgb(
+       ${randomRGB(0, 255)},
+       ${randomRGB(0, 255)},
+       ${randomRGB(0, 255)})`;
+     });
+   }</code></pre>
+          </ul>
         </section>
         <section class="section" id="projects">
-          <div class="section-title"></div>
-          <ul class="section-list"></ul>
+          <div class="section-title">Projects</div>
+          <ul class="section-list">
+            <li class="section-item">
+              <a href="http://github.com/NaN-Simon/rsschool-cv">RSS-SV</a>
+            </li>
+          </ul>
         </section>
         <section class="section" id="courses">
-          <div class="section-title"></div>
-          <ul class="section-list"></ul>
+          <div class="section-title">Courses</div>
+          <ul class="section-list">
+            <li class="section-item">Htmlacademy <span>(All free exercise)</span></li>
+            <li class="section-item">Metalamp <span>(In the process of the second task)</span></li>
+            <li class="section-item">Ispeak <span>English course (In the process)</span></li>
+          </ul>
         </section>
         <section class="section" id="languages">
-          <div class="section-title"></div>
-          <ul class="section-list"></ul>
+          <div class="section-title">Languages</div>
+          <ul class="section-list"><li class="section-item">Russian <span>Native</span></li>
+          <li class="section-item">English <span>Elementary</span></li></ul>
         </section>
       </div>
     </main>
