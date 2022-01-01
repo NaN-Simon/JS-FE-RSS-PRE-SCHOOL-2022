@@ -124,7 +124,7 @@ body {
   color: #00adff;
   transition: color 0.5s;
 }
-.section-language{
+.section-language {
   border-bottom: 0px;
 }
 .footer {
@@ -133,4 +133,15 @@ body {
 }
 .footer-container {
   color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 15px;
+}
+.rss {
+  width: 121px;
+  height: 45px;
+  background-image: url(https://rs.school/images/rs_school_js.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
 }
