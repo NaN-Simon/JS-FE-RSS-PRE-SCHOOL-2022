@@ -5,6 +5,7 @@
 }
 .header {
   background-color: #9a86ad;
+  padding: 10px;
 }
 .container {
   max-width: 1440px;
@@ -100,6 +101,7 @@ body {
   text-transform: uppercase;
   color: #00adff;
   font-size: 1.5rem;
+  margin-top: 10px;
   margin-bottom: 15px;
 }
 .section-item {
@@ -121,4 +123,14 @@ body {
   text-decoration: none;
   color: #00adff;
   transition: color 0.5s;
+}
+.section-language{
+  border-bottom: 0px;
+}
+.footer {
+  background-color: #9a86ad;
+  padding: 15px;
+}
+.footer-container {
+  color: #fff;
 }
