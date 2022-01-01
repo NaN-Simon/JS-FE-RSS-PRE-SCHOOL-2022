@@ -2,6 +2,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  
+}
+html {
+  scroll-behavior: smooth;
 }
 .header {
   background-color: #9a86ad;
@@ -103,6 +107,7 @@ body {
   font-size: 1.5rem;
   margin-top: 10px;
   margin-bottom: 15px;
+  font-weight: 400;
 }
 .section-item {
   margin-bottom: 10px;
