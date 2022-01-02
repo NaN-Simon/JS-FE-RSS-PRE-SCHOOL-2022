@@ -1,4 +1,4 @@
-<img src="./image/asd.png" alt="avatar" width="48">
+<img src="./img/avatar.png" alt="avatar" width="48">
 
 # Isaev Kirill 
 
