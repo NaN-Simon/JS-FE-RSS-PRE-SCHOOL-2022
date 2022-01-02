@@ -44,6 +44,11 @@ body {
   align-items: center;
   list-style: none;
 }
+@media (max-width: 768px){
+  .nav-list {
+    flex-wrap: wrap;
+  }
+}
 .nav-link {
   position: relative;
   padding: 12px;
@@ -53,6 +58,11 @@ body {
   line-height: 50px;
   transition: 0.8s;
   color: #fff;
+}
+@media (max-width: 768px){
+  .nav-link {
+    line-height: 25px;
+  }
 }
 .nav-link::after {
   content: "";
@@ -83,6 +93,11 @@ body {
   padding: 10px;
   padding-bottom: 35px;
   border-bottom: 1px solid #672f2f;
+}
+@media (max-width: 768px) {
+  .section {
+    width: calc(100% - 20px);
+  }
 }
 .section-profile {
   display: flex;

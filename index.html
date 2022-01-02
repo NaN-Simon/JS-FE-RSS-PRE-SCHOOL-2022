@@ -8,9 +8,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap"
-      rel="stylesheet"/>
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
-    <link rel="icon" href="img/favicon.ico">
+    <link rel="icon" href="img/favicon.ico" />
 
     <title>sv</title>
   </head>
@@ -120,21 +121,15 @@
         <section class="section" id="code">
           <h2 class="section-title">Code</h2>
           <ul class="section-list">
-            <pre
-              class="pre"
-            ><code>     const randomRGB = function randInt(min, max) {
-     const num = (max - min + 1) * Math.random() + min;
-     return Math.floor(num);
-   };
-   let rainbowForH1 = document.querySelectorAll("h1");
-   for (i = 0; i < rainbowForH1.length; i++) {
-     rainbowForH1[i].addEventListener("mouseover", function () {
-       this.style.background = `rgb(
-       ${randomRGB(0, 255)},
-       ${randomRGB(0, 255)},
-       ${randomRGB(0, 255)})`;
-     });
-   }</code></pre>
+            <pre class="pre"><code> function fakeBin(x){
+   let result= '';
+    for(let i = 0; i < x.length; i++){
+    if(x[i] < '5')result += '0';
+    else if(x[i] >= '5')result += '1';
+  }
+  return result;
+}
+          </code></pre>
           </ul>
         </section>
         <section class="section" id="projects">
