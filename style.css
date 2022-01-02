@@ -44,7 +44,7 @@ body {
   align-items: center;
   list-style: none;
 }
-@media (max-width: 768px){
+@media (max-width: 768px) {
   .nav-list {
     flex-wrap: wrap;
   }
@@ -59,7 +59,7 @@ body {
   transition: 0.8s;
   color: #fff;
 }
-@media (max-width: 768px){
+@media (max-width: 768px) {
   .nav-link {
     line-height: 25px;
   }
@@ -75,11 +75,11 @@ body {
   transition: 0.8s;
   opacity: 0;
 }
-.nav-link:hover::after{
+.nav-link:hover::after {
   opacity: 1;
 }
-.nav-link:hover{
-  color:#c3c3c3
+.nav-link:hover {
+  color: #c3c3c3;
 }
 /*Main*/
 .section-avatar {
@@ -182,6 +182,7 @@ code {
   justify-content: space-between;
   align-items: center;
   margin: 0 15px;
+  margin: 0 auto;
 }
 .rss {
   width: 121px;
