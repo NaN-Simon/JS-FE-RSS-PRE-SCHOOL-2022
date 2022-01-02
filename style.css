@@ -1,8 +1,12 @@
+@font-face {
+  font-family: Roboto Mono Regular;
+  src: url("fonts/RobotoMono-Regular.ttf");
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  
 }
 html {
   scroll-behavior: smooth;
@@ -27,7 +31,7 @@ body {
   justify-content: space-between;
   min-width: 320px;
   min-height: 100vh;
-  font-family: "Segoe UI", Roboto, Oxygen, sans-serif;
+  font-family: Poppins, "Segoe UI", Roboto, Oxygen, sans-serif;
   font-size: 18px;
   line-height: 1.5;
 }
@@ -41,14 +45,32 @@ body {
   list-style: none;
 }
 .nav-link {
-  padding: 0 12px;
+  position: relative;
+  padding: 12px;
   text-decoration: none;
   font-size: 20px;
   font-weight: 300;
   line-height: 50px;
+  transition: 0.8s;
   color: #fff;
 }
-
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 18px;
+  top: 42px;
+  width: calc(100% - 34px);
+  height: 1.5px;
+  background-color: #fff;
+  transition: 0.8s;
+  opacity: 0;
+}
+.nav-link:hover::after{
+  opacity: 1;
+}
+.nav-link:hover{
+  color:#c3c3c3
+}
 /*Main*/
 .section-avatar {
   width: 200px;
@@ -128,6 +150,9 @@ body {
   text-decoration: none;
   color: #00adff;
   transition: color 0.5s;
+}
+code {
+  font-family: "Roboto Mono Regular";
 }
 .section-language {
   border-bottom: 0px;
