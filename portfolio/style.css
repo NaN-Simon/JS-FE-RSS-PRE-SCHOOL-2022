@@ -1,0 +1,13 @@
+@font-face {
+  font-family: Inter-Regular;
+  src: url("assets/fonts/Inter-Regular.ttf");
+}
+@font-face {
+  font-family: Merriweather-Bold;
+  src: url("assets/fonts/Merriweather-Bold.ttf");
+}
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  min-height: 50px;
+}
