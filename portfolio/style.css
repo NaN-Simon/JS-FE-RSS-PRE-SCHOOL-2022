@@ -53,8 +53,7 @@ ul.nav-list {
   justify-content: space-between;
   align-items: center;
 }
-.nav-link,
-.language {
+.nav-link {
   padding: 0 15px;
   font-family: Inter-Regular;
   text-decoration: none;
@@ -64,14 +63,49 @@ ul.nav-list {
   color: #ffffff;
   transition: 0.4s;
 }
-.language-en,
 .nav-link:hover {
   color: #bdae82;
 }
 .language {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 70px;
-  padding: 0;
+  width: 25px;
+  height: 50px;
+  color: #ffffff;
+  padding: 0 15px;
+  font-family: Inter-Regular;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 50px;
+}
+.languages-checkbox {
+  position: relative;
+  display: inline-block;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  font-size: 20px;
+}
+.languages-checkbox::after {
+  content: "en";
+  position: absolute;
+  left: -22px;
+  top: -19px;
+  color: #bdae82;
+}
+.languages-checkbox:checked::after {
+  color: #ffffff;
+}
+.languages-checkbox::before {
+  content: "ru";
+  position: absolute;
+  right: -46px;
+  top: -19px;
+  color: #ffffff;
+}
+.languages-checkbox:checked::before {
+  color: #bdae82;
+}
+.languages-text {
+  position: absolute;
+  margin: 0 10px;
+  font-size: 20px;
 }
