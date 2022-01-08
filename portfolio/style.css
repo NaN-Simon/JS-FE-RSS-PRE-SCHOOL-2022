@@ -17,9 +17,7 @@
 }
 body {
   background-color: #000000;
-}
-.header {
-  padding: 20px 0;
+  font-family: Inter-Regular;
 }
 .container {
   width: 1440px; /* заменить на max-width, после review */
@@ -30,6 +28,11 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 20px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("./assets/img/header/header-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center 0;
 }
 .logo {
   background-image: url("./assets/svg/header/Vector.svg");
@@ -44,6 +47,7 @@ body {
 }
 ul.nav-list {
   display: flex;
+  justify-content: center;
   align-items: center;
   list-style: none;
   width: 500px;
@@ -67,10 +71,9 @@ ul.nav-list {
   color: #bdae82;
 }
 .language {
-  width: 25px;
+  width: 70px;
   height: 50px;
   color: #ffffff;
-  padding: 0 15px;
   font-family: Inter-Regular;
   font-size: 20px;
   font-weight: 400;
@@ -87,7 +90,7 @@ ul.nav-list {
 .languages-checkbox::after {
   content: "en";
   position: absolute;
-  left: -22px;
+  left: -2px;
   top: -19px;
   color: #bdae82;
 }
@@ -97,7 +100,7 @@ ul.nav-list {
 .languages-checkbox::before {
   content: "ru";
   position: absolute;
-  right: -46px;
+  right: -66px;
   top: -19px;
   color: #ffffff;
 }
@@ -106,6 +109,60 @@ ul.nav-list {
 }
 .languages-text {
   position: absolute;
-  margin: 0 10px;
+  margin: 0 30px;
   font-size: 20px;
+}
+
+.hero-container {
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("./assets/img/header/header-bg.jpg");
+  background-position: center -90px;
+  background-repeat: no-repeat;
+  padding: 0 80px;
+}
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  width: 500px;
+  height: 330px;
+  padding-top: 160px;
+}
+.hero-title {
+  font-family: Merriweather-Bold;
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 120px;
+  text-align: left;
+  vertical-align: top;
+  color: #ffffff;
+}
+.hero-text {
+  width: 470px;
+  font-family: Inter-Regular;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 40px;
+  color: #ffffff;
+}
+.hero-btn {
+/*   display: flex;
+  justify-content: center;
+  align-items: center; */
+  width: 220px;
+  height: 55px;
+  margin-top: 25px;
+  font-family: inherit;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 40px;
+  border: 0;
+  background-color: #bdae82;
+  color: #000000;
+  cursor: pointer;
+  transition: 0.8s;
+}
+.hero-btn:hover{
+  background-color: #ccb05c;
+
 }
