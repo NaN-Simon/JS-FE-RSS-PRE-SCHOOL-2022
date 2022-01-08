@@ -17,6 +17,7 @@
 }
 body {
   background-color: #000000;
+  color: #ffffff;
   font-family: Inter-Regular;
 }
 .container {
@@ -29,8 +30,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-    url("./assets/img/header/header-bg.jpg");
+  background-image: url("./assets/img/header/header-bg.jpg");
   background-repeat: no-repeat;
   background-position: center 0;
 }
@@ -114,9 +114,8 @@ ul.nav-list {
 }
 
 .hero-container {
-  height: 100vh;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-    url("./assets/img/header/header-bg.jpg");
+  height: 820px;
+  background-image: url("./assets/img/header/header-bg.jpg");
   background-position: center -90px;
   background-repeat: no-repeat;
   padding: 0 80px;
@@ -162,12 +161,14 @@ ul.nav-list {
 .hero-btn:hover {
   background-color: #ccb05c;
 }
-
-.skills{
+.skills {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  padding-top: 100px;
+  padding-bottom: 2.03px;
+  align-items: center;
 }
-.section-header-title{
+.section-header-title {
   display: flex;
   justify-content: center;
   width: 50%;
@@ -196,4 +197,62 @@ ul.nav-list {
   background-color: #bdae82;
   top: 50%;
   left: -75px;
+}
+.skills-items {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-top: 60px;
+}
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 320px;
+  list-style-type: none;
+}
+.skill-icon-1 {
+  background-image: url("./assets/svg/skills/camera.svg");
+  background-repeat: no-repeat;
+  width: 62px;
+  height: 50px;
+  padding-bottom: 108px;
+}
+.skill-icon-2 {
+  background-image: url("./assets/svg/skills/video.svg");
+  background-repeat: no-repeat;
+  width: 60px;
+  height: 50px;
+  padding-bottom: 108px;
+}
+.skill-icon-3 {
+  background-image: url("./assets/svg/skills/image.svg");
+  background-repeat: no-repeat;
+  width: 66px;
+  height: 50px;
+  padding-bottom: 108px;
+}
+.skill-icon-4 {
+  background-image: url("./assets/svg/skills/mic.svg");
+  background-repeat: no-repeat;
+  width: 32px;
+  height: 50px;
+  padding-bottom: 108px;
+}
+.skill-name {
+  padding-bottom: 20px;
+  font-family: Inter-Regular;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 40px;
+  text-align: center;
+  color: #ffffff;
+}
+.skill-discription {
+  font-family: Inter-Regular;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 36px;
+  text-align: center;
+  color: #ffffff;
 }
