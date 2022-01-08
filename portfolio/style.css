@@ -146,9 +146,6 @@ ul.nav-list {
   color: #ffffff;
 }
 .hero-btn {
-/*   display: flex;
-  justify-content: center;
-  align-items: center; */
   width: 220px;
   height: 55px;
   margin-top: 25px;
@@ -162,7 +159,41 @@ ul.nav-list {
   cursor: pointer;
   transition: 0.8s;
 }
-.hero-btn:hover{
+.hero-btn:hover {
   background-color: #ccb05c;
+}
 
+.skills{
+  display: flex;
+  justify-content: center;
+}
+.section-header-title{
+  display: flex;
+  justify-content: center;
+  width: 50%;
+  overflow-x: hidden;
+  position: relative;
+  font-family: Merriweather-Bold;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 80px;
+  color: #bdae82;
+}
+.section-header-title::before {
+  content: "";
+  position: absolute;
+  width: 350px;
+  height: 2px;
+  background-color: #bdae82;
+  top: 50%;
+  right: -75px;
+}
+.section-header-title::after {
+  content: "";
+  position: absolute;
+  width: 350px;
+  height: 2px;
+  background-color: #bdae82;
+  top: 50%;
+  left: -75px;
 }
