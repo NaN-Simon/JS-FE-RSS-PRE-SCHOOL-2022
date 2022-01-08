@@ -128,16 +128,17 @@ ul.nav-list {
   padding-top: 160px;
 }
 .hero-title {
+  text-align: left;
+  vertical-align: top;
   font-family: Merriweather-Bold;
   font-size: 60px;
   font-weight: 700;
   line-height: 120px;
-  text-align: left;
-  vertical-align: top;
   color: #ffffff;
 }
 .hero-text {
   width: 470px;
+  padding-bottom: 25px;
   font-family: Inter-Regular;
   font-size: 20px;
   font-weight: 400;
@@ -147,7 +148,7 @@ ul.nav-list {
 .btn {
   width: 220px;
   height: 55px;
-  margin-top: 25px;
+  /*   margin-top: 25px; */
   font-family: inherit;
   font-size: 20px;
   font-weight: 400;
@@ -161,7 +162,7 @@ ul.nav-list {
 .btn-not-active {
   width: 220px;
   height: 55px;
-  margin-top: 25px;
+  /*   margin-top: 25px; */
   font-family: inherit;
   font-size: 20px;
   font-weight: 400;
@@ -178,11 +179,12 @@ ul.nav-list {
   color: #000000;
 }
 .skills,
-.portfolio {
+.portfolio,
+.video,
+.price {
   display: flex;
   flex-direction: column;
   padding-top: 100px;
-  padding-bottom: 2.03px;
   align-items: center;
 }
 .section-header-title {
@@ -291,4 +293,63 @@ ul.nav-list {
 .portfolio-image {
   width: 450px;
   height: 560px;
+}
+.video-image {
+  width: 1400px;
+  height: 705px;
+}
+.video-player {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 60px;
+}
+.video-svg {
+  position: absolute;
+}
+.price-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  padding-top: 60px;
+}
+.price-items li {
+  list-style-type: none;
+}
+.price-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 450px;
+  height: 505px;
+  border: 2px solid #bdae82;
+}
+.price-name {
+  align-items: center;
+  vertical-align: top;
+  font-family: Merriweather-Bold;
+  font-size: 28px;
+  line-height: 56px;
+}
+.price-cost {
+  align-items: center;
+  vertical-align: top;
+  font-family: Merriweather-Bold;
+  font-size: 24px;
+  line-height: 48px;
+  color: #bdae82;
+}
+.price-item span {
+  align-items: center;
+  vertical-align: top;
+  font-family: Inter-Regular;
+  font-size: 18px;
+  line-height: 36px;
+}
+.price-description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
