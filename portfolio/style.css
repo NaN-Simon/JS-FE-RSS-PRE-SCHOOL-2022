@@ -15,6 +15,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+html {
+  scroll-behavior: smooth;
+}
 :root {
   --color-gold: #bdae82;
 }
@@ -115,7 +118,6 @@ ul.nav-list {
   margin: 0 30px;
   font-size: 20px;
 }
-
 .hero {
   height: 820px;
   background-image: url("./assets/img/header/header-bg.jpg");
@@ -419,14 +421,23 @@ ul.nav-list {
   display: flex;
   gap: 20px;
 }
-.social-list img {
+.social-list li {
   width: 32px;
   height: 32px;
+  list-style-type: none;
 }
 .footer-data span,
+.footer-data a,
 .rss-name {
   display: block;
   font-family: Inter-Regular;
   font-size: 20px;
   line-height: 50px;
+  text-decoration: none;
+  color: #ffffff;
+  transition: 0.4s;
+}
+.footer-data a:hover,
+.rss-name:hover {
+  color: var(--color-gold);
 }
