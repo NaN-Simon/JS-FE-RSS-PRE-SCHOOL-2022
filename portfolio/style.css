@@ -191,7 +191,7 @@ ul.nav-list {
   display: flex;
   width: 48.612%;
   overflow-x: hidden;
-  /* padding-top: 100px; */
+  padding-top: 100px;
   font-family: Merriweather-Bold;
   font-weight: 700;
   font-size: 40px;
@@ -309,6 +309,9 @@ ul.nav-list {
 .video-svg {
   position: absolute;
 }
+.price {
+  padding-bottom: 100px;
+}
 .price-items {
   display: flex;
   flex-wrap: wrap;
@@ -398,8 +401,32 @@ ul.nav-list {
 .header-title-contact {
   width: 450px;
   margin-bottom: 40px;
+  padding-top: 0px;
 }
 .header-title-contact::after,
 .header-title-contact::before {
   content: none;
+}
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 150px;
+  padding: 0 20px;
+}
+.footer-data,
+.social-list {
+  display: flex;
+  gap: 20px;
+}
+.social-list img {
+  width: 32px;
+  height: 32px;
+}
+.footer-data span,
+.rss-name {
+  display: block;
+  font-family: Inter-Regular;
+  font-size: 20px;
+  line-height: 50px;
 }
