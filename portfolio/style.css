@@ -148,7 +148,6 @@ ul.nav-list {
 .btn {
   width: 220px;
   height: 55px;
-  /*   margin-top: 25px; */
   font-family: inherit;
   font-size: 20px;
   font-weight: 400;
@@ -162,7 +161,6 @@ ul.nav-list {
 .btn-not-active {
   width: 220px;
   height: 55px;
-  /*   margin-top: 25px; */
   font-family: inherit;
   font-size: 20px;
   font-weight: 400;
@@ -184,15 +182,15 @@ ul.nav-list {
 .price {
   display: flex;
   flex-direction: column;
-  padding-top: 100px;
   align-items: center;
 }
 .section-header-title {
   display: flex;
   width: 48.612%;
   overflow-x: hidden;
+  padding-top: 100px;
   font-family: Merriweather-Bold;
-  /* font-weight: 700; */
+  font-weight: 700;
   font-size: 40px;
   line-height: 80px;
   color: #bdae82;
@@ -220,7 +218,8 @@ ul.nav-list {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  padding-top: 60px;
+  width: 1400px;
+  padding-top: 62px;
 }
 .skill-item {
   display: flex;
