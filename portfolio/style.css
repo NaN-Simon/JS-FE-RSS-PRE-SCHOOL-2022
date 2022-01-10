@@ -135,6 +135,7 @@ ul.nav-list {
 .hero-title {
   text-align: left;
   vertical-align: top;
+  padding-bottom: 10px;
   font-family: Merriweather-Bold;
   font-size: 60px;
   font-weight: 700;
@@ -224,7 +225,8 @@ ul.nav-list {
   justify-content: space-between;
   flex-wrap: wrap;
   width: 1400px;
-  padding-top: 62px;
+  padding-top: 60px;
+  margin-bottom: 9px;
 }
 .skill-item {
   display: flex;
@@ -238,28 +240,28 @@ ul.nav-list {
   background-repeat: no-repeat;
   width: 62px;
   height: 50px;
-  padding-bottom: 108px;
+  padding-bottom: 101px;
 }
 .skill-icon-2 {
   background-image: url("./assets/svg/skills/video.svg");
   background-repeat: no-repeat;
   width: 60px;
   height: 50px;
-  padding-bottom: 108px;
+  padding-bottom: 101px;
 }
 .skill-icon-3 {
   background-image: url("./assets/svg/skills/image.svg");
   background-repeat: no-repeat;
   width: 66px;
   height: 50px;
-  padding-bottom: 108px;
+  padding-bottom: 101px;
 }
 .skill-icon-4 {
   background-image: url("./assets/svg/skills/mic.svg");
   background-repeat: no-repeat;
   width: 32px;
   height: 50px;
-  padding-bottom: 108px;
+  padding-bottom: 101px;
 }
 .skill-name {
   padding-bottom: 20px;
@@ -271,6 +273,7 @@ ul.nav-list {
   color: #ffffff;
 }
 .skill-discription {
+  width: 280px;
   font-family: Inter-Regular;
   font-weight: 400;
   font-size: 18px;
@@ -292,10 +295,14 @@ ul.nav-list {
   gap: 25px;
   padding-top: 60px;
   list-style-type: none;
+  justify-content: center;
 }
 .portfolio-image {
   width: 450px;
   height: 560px;
+}
+.video-title {
+  padding-top: 91px;
 }
 .video-image {
   width: 1400px;
@@ -328,6 +335,7 @@ ul.nav-list {
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
+  padding: 22px 0;
   width: 450px;
   height: 505px;
   border: 2px solid var(--color-gold);
@@ -358,6 +366,7 @@ ul.nav-list {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 18px;
 }
 .contacts-container {
   display: flex;
