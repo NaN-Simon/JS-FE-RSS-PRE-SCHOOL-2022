@@ -96,7 +96,7 @@ ul.nav-list {
 .languages-checkbox::after {
   content: "en";
   position: absolute;
-  left: -2px;
+  left: 1px;
   top: -19px;
   color: var(--color-gold);
 }
@@ -106,7 +106,7 @@ ul.nav-list {
 .languages-checkbox::before {
   content: "ru";
   position: absolute;
-  right: -66px;
+  right: -70px;
   top: -19px;
   color: #ffffff;
 }
@@ -115,7 +115,7 @@ ul.nav-list {
 }
 .languages-text {
   position: absolute;
-  margin: 0 30px;
+  margin: 0 34px;
   font-size: 20px;
 }
 .hero {
@@ -240,28 +240,28 @@ ul.nav-list {
   background-repeat: no-repeat;
   width: 62px;
   height: 50px;
-  padding-bottom: 101px;
+  padding-bottom: 100px;
 }
 .skill-icon-2 {
   background-image: url("./assets/svg/skills/video.svg");
   background-repeat: no-repeat;
   width: 60px;
   height: 50px;
-  padding-bottom: 101px;
+  padding-bottom: 100px;
 }
 .skill-icon-3 {
   background-image: url("./assets/svg/skills/image.svg");
   background-repeat: no-repeat;
   width: 66px;
   height: 50px;
-  padding-bottom: 101px;
+  padding-bottom: 100px;
 }
 .skill-icon-4 {
   background-image: url("./assets/svg/skills/mic.svg");
   background-repeat: no-repeat;
   width: 32px;
   height: 50px;
-  padding-bottom: 101px;
+  padding-bottom: 100px;
 }
 .skill-name {
   padding-bottom: 20px;
@@ -271,6 +271,7 @@ ul.nav-list {
   line-height: 40px;
   text-align: center;
   color: #ffffff;
+  letter-spacing: 0.4px;
 }
 .skill-discription {
   width: 280px;
@@ -387,8 +388,8 @@ ul.nav-list {
 .contacts-feedback input::placeholder,
 .contacts-feedback textarea::placeholder {
   color: var(--color-gold);
-  padding-top: 5px;
-  padding-left: 20px;
+/*   padding-top: 5px;
+  padding-left: 20px; */
 }
 .contacts-feedback textarea,
 .contacts-feedback input {
@@ -398,9 +399,11 @@ ul.nav-list {
   font-family: inherit;
   color: var(--color-gold);
   font-size: 20px;
+  padding: 5px 18px;
 }
 .contacts-feedback textarea {
   height: 100px;
+  padding: 13px 18px;
 }
 .contacts-feedback input {
   height: 50px;
@@ -428,6 +431,7 @@ ul.nav-list {
 .footer-data,
 .social-list {
   display: flex;
+  width: 190px;
   gap: 20px;
 }
 .social-list li {
