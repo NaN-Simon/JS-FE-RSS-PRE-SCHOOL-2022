@@ -305,15 +305,24 @@ ul.nav-list {
   .skills-items {
     justify-content: center;
     margin: 0 auto;
+    padding-top: 37px;
     max-width: 768px;
   }
 }
+
 .skill-item {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 320px;
   list-style-type: none;
+}
+@media (max-width: 768px){
+  .skill-item {
+    width: 345px;
+    height: 224px;
+    margin-bottom: 38px;
+  }
 }
 .skill-icon-1 {
   background-image: url("./assets/svg/skills/camera.svg");
@@ -343,6 +352,15 @@ ul.nav-list {
   height: 50px;
   padding-bottom: 100px;
 }
+@media (max-width: 768px){
+  .skill-icon-1,
+  .skill-icon-2,
+  .skill-icon-3,
+  .skill-icon-4 {
+    padding-bottom: 78px;
+  }
+  
+}
 .skill-name {
   padding-bottom: 20px;
   font-family: Inter-Regular;
@@ -361,6 +379,17 @@ ul.nav-list {
   line-height: 36px;
   text-align: center;
   color: #ffffff;
+}
+@media (max-width: 768px){
+  .skill-discription {
+    width: 280px;
+    font-family: Inter-Regular;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    color: #ffffff;
+  }
 }
 .portfolio-buttons {
   display: flex;
