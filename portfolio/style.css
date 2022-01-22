@@ -27,9 +27,16 @@ body {
   font-family: Inter-Regular;
 }
 .container {
-  width: 1440px; /* заменить на max-width, после review */
+  min-width: 1440px; /* заменить на max-width, после review */
   margin: 0 auto;
   min-height: 20px;
+}
+@media (max-width: 768px){
+  .container{
+    min-width: 0px;
+    /* max-width: 768px */
+    width: calc(100% - 40px);
+  }
 }
 .header-container {
   display: flex;
@@ -39,6 +46,14 @@ body {
   background-image: url("./assets/img/header/header-bg.jpg");
   background-repeat: no-repeat;
   background-position: center 0;
+}
+@media (max-width: 768px){
+  .header-container{
+    background-position: center -5px;
+    /* background-size: auto 620px; */
+    margin: 0 auto;
+    max-width: 768px;
+  }
 }
 .logo {
   background-image: url("./assets/svg/header/Vector.svg");
@@ -124,6 +139,15 @@ ul.nav-list {
   background-position: center -90px;
   background-repeat: no-repeat;
   padding: 0 80px;
+}
+@media (max-width: 768px){
+  .hero{
+    height: 500px;
+    background-position: center -90px;
+    /* background-size: auto 620px; */
+    margin: 0 auto;
+    max-width: 768px;
+  }
 }
 .hero-container {
   display: flex;
@@ -228,6 +252,13 @@ ul.nav-list {
   padding-top: 60px;
   margin-bottom: 9px;
 }
+@media (max-width: 768px){
+  .skills-items{
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 768px;
+  }
+}
 .skill-item {
   display: flex;
   flex-direction: column;
@@ -290,6 +321,15 @@ ul.nav-list {
   gap: 5px;
   padding-top: 60px;
 }
+@media (max-width: 768px){
+  .portfolio-buttons{
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+  }
+}
+
+
 .portfolio-images {
   display: flex;
   flex-wrap: wrap;
@@ -298,16 +338,31 @@ ul.nav-list {
   list-style-type: none;
   justify-content: center;
 }
+
 .portfolio-image {
   width: 450px;
-  height: 560px;
 }
+@media (max-width: 768px){
+  .portfolio-image{
+    background-size: auto 620px;
+    margin: 0 auto;
+    width: calc(100% - 20px);
+  }
+}
+
+
 .video-title {
   padding-top: 91px;
 }
 .video-image {
-  width: 1400px;
-  height: 705px;
+  max-width: 1400px;
+}
+@media (max-width: 768px){
+  .video-image{
+    background-size: auto 620px;
+    margin: 0 auto;
+    max-width: calc(100% - 40px);
+  }
 }
 .video-player {
   position: relative;
@@ -325,6 +380,7 @@ ul.nav-list {
 .price-items {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 25px;
   padding-top: 60px;
 }
@@ -373,10 +429,24 @@ ul.nav-list {
   display: flex;
   justify-content: flex-end;
   padding-top: 60px;
+  max-width: 1440px;
   height: 700px;
+  margin: 0 auto;
   background: url("./assets/img/contacts/contacts.jpg");
   background-size: auto 700px;
   background-position: center center;
+  background-repeat: no-repeat;
+}
+@media (max-width: 768px){
+  .contacts-container{
+    justify-content: center;
+    background-size: auto 620px;
+    margin: 0 auto;
+    max-width: 768px;
+    .contacts-feedback{
+      margin-right: 0;
+    }
+  }
 }
 .contacts-feedback {
   display: flex;
@@ -388,8 +458,6 @@ ul.nav-list {
 .contacts-feedback input::placeholder,
 .contacts-feedback textarea::placeholder {
   color: var(--color-gold);
-/*   padding-top: 5px;
-  padding-left: 20px; */
 }
 .contacts-feedback textarea,
 .contacts-feedback input {
