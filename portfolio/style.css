@@ -577,7 +577,11 @@ ul.nav-list {
     height: 20px;
     z-index: 3;
   }
+  ul.nav-list{
+    display: none;
+  }
   ul.nav-list.active{
+    display: block;
     background: black;
     width: 620px;
     height: 1024px;
@@ -586,17 +590,19 @@ ul.nav-list {
     top: 0;
     flex-direction: column;
     align-items: start;
+    justify-content: inherit;
     z-index: 1;
-    padding-left: 127px;
-    padding-top: 134px;
+    padding-left: 120px;
+    padding-top: 132px;
+    line-height: 89px;
   }
   .header-burger::before,
   .header-burger::after,
   .header-burger span {
     content: "";
-    background-color: rgb(229, 255, 0);
+    background-color: #ffffff;
     position: absolute;
-    width: 100%;
+    width: 65px;
     height: 2px;
     left: 0;
     transition: all 0.3s ease 0s;
