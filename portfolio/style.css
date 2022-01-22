@@ -438,10 +438,12 @@ ul.nav-list {
   max-width: 1400px;
 }
 @media (max-width: 768px) {
+  .video-title{
+    padding-top: 68px;
+  }
   .video-image {
-    background-size: auto 620px;
-    margin: 0 auto;
-    max-width: calc(100% - 40px);
+    width: 768px;
+    height: 418px;
   }
 }
 .video-player {
@@ -451,8 +453,17 @@ ul.nav-list {
   align-items: center;
   padding-top: 60px;
 }
+
 .video-svg {
   position: absolute;
+}
+@media (max-width: 768px) {
+  .video-player{
+    padding-top: 39px;
+  }
+  .video-svg{
+    width: 64px;
+  }
 }
 .price {
   padding-bottom: 100px;
