@@ -270,7 +270,7 @@ ul.nav-list {
 }
 @media (max-width: 768px) {
   .section-header-title {
-    padding-top: 61px;
+    padding-top: 62px;
     font-size: 32px;
     line-height: 100px;
   }
@@ -304,8 +304,7 @@ ul.nav-list {
 @media (max-width: 768px) {
   .skills-items {
     justify-content: center;
-    margin: 0 auto;
-    padding-top: 37px;
+    padding-top: 35px;
     max-width: 768px;
   }
 }
@@ -401,9 +400,10 @@ ul.nav-list {
 }
 @media (max-width: 768px) {
   .portfolio-buttons {
-    flex-direction: column;
     justify-content: space-between;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
+    width: 445px;
+    padding-top: 38px;
   }
 }
 
@@ -415,15 +415,19 @@ ul.nav-list {
   list-style-type: none;
   justify-content: center;
 }
-
+@media (max-width: 768px) {
+  .portfolio-images{
+  gap: 21px;
+  }
+}
 .portfolio-image {
   width: 450px;
 }
 @media (max-width: 768px) {
   .portfolio-image {
-    background-size: auto 620px;
+    /* background-size: auto 620px; */
     margin: 0 auto;
-    width: calc(100% - 20px);
+    width: 450px;
   }
 }
 
