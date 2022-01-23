@@ -687,7 +687,12 @@ ul.nav-list {
     z-index: 3;
   }
   ul.nav-list {
-    display: none;
+    /* display: none; */
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    overflow: hidden;
   }
   ul.nav-list.active {
     display: block;
@@ -704,6 +709,7 @@ ul.nav-list {
     padding-left: 120px;
     padding-top: 132px;
     line-height: 89px;
+    transition: 0.5s;
   }
   .language {
     width: 66px;
