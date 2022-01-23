@@ -693,6 +693,8 @@ ul.nav-list {
     top: 0;
     right: 0;
     overflow: hidden;
+    opacity: 0;
+    transition: 0.5s;
   }
   ul.nav-list.active {
     display: block;
@@ -709,6 +711,7 @@ ul.nav-list {
     padding-left: 120px;
     padding-top: 132px;
     line-height: 89px;
+    opacity: 1;
     transition: 0.5s;
   }
   .language {
