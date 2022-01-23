@@ -454,23 +454,28 @@ ul.nav-list {
   justify-content: center;
   align-items: center;
   padding-top: 60px;
-  padding-bottom: 9px;
+  padding-bottom: 2px;
 }
 
 .video-svg {
   position: absolute;
 }
+.price {
+  padding-bottom: 100px;
+}
 @media (max-width: 768px) {
   .video-player{
     padding-top: 39px;
+    padding-bottom: 8px;
   }
   .video-svg{
     width: 64px;
   }
+  .price {
+    padding-bottom: 30px;
+  }
 }
-.price {
-  padding-bottom: 100px;
-}
+
 .price-items {
   display: flex;
   flex-wrap: wrap;
@@ -480,7 +485,7 @@ ul.nav-list {
 }
 @media (max-width: 768px) {
   .price-items{
-    padding-top: 39px;
+    padding-top: 40px;
     gap: 50px;
   }
 }
@@ -545,12 +550,9 @@ ul.nav-list {
 @media (max-width: 768px) {
   .contacts-container {
     justify-content: center;
-    background-size: auto 620px;
-    margin: 0 auto;
-    max-width: 768px;
-  }
-  .contacts-feedback {
-    margin-right: 0;
+    background: url("./assets/img/contacts/contacts2.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
   }
 }
 .contacts-feedback {
@@ -559,6 +561,12 @@ ul.nav-list {
   flex-wrap: wrap;
   margin-right: 20px;
   width: 450px;
+}
+@media (max-width: 768px){
+  .contacts-feedback{
+    margin-right: 0px;
+    align-items: center;
+  }
 }
 .contacts-feedback input::placeholder,
 .contacts-feedback textarea::placeholder {
@@ -573,6 +581,7 @@ ul.nav-list {
   color: var(--color-gold);
   font-size: 20px;
   padding: 5px 18px;
+  width: 450px;
 }
 .contacts-feedback textarea {
   height: 100px;
@@ -589,6 +598,13 @@ ul.nav-list {
   width: 450px;
   margin-bottom: 40px;
   padding-top: 0px;
+}
+@media (max-width: 768px){
+  .header-title-contact{
+    margin-bottom: 23px;
+    padding-top: 32px;
+    justify-content: center;
+  }
 }
 .header-title-contact::after,
 .header-title-contact::before {
