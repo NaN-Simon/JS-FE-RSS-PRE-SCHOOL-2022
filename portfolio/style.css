@@ -256,6 +256,8 @@ ul.nav-list {
   flex-direction: column;
   align-items: center;
 }
+
+
 .section-header-title {
   display: flex;
   width: 48.612%;
@@ -452,6 +454,7 @@ ul.nav-list {
   justify-content: center;
   align-items: center;
   padding-top: 60px;
+  padding-bottom: 9px;
 }
 
 .video-svg {
@@ -475,6 +478,12 @@ ul.nav-list {
   gap: 25px;
   padding-top: 60px;
 }
+@media (max-width: 768px) {
+  .price-items{
+    padding-top: 39px;
+    gap: 50px;
+  }
+}
 .price-items li {
   list-style-type: none;
 }
@@ -487,6 +496,11 @@ ul.nav-list {
   width: 450px;
   height: 505px;
   border: 2px solid var(--color-gold);
+}
+@media (max-width: 768px) {
+  .price-item{
+    width: 420px;
+  }
 }
 .price-name {
   align-items: center;
