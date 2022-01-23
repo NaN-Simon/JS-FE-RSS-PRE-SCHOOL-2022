@@ -441,13 +441,20 @@ ul.nav-list {
   padding-top: 91px;
 }
 .video-image {
-  max-width: 1400px;
+  background-image: url("./assets/img/video/video.jpg");
+  background-repeat: no-repeat;
+  background-position: center 0;
+  /* max-width: 1400px;
+  height: 705px; */
+  width: 1400px;
+  height: 705px;
 }
 @media (max-width: 768px) {
   .video-title{
     padding-top: 68px;
   }
   .video-image {
+    background-image: url("./assets/img/video/video2.jpg");
     width: 768px;
     height: 418px;
   }
