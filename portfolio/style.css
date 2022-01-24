@@ -232,6 +232,11 @@ ul.nav-list {
     width: 318px;
   }
 }
+@media (max-width: 320px) {
+  .hero-text {
+    width: 260px;
+  }
+}
 .btn {
   width: 220px;
   height: 55px;
