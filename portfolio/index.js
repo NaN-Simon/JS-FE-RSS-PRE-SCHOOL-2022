@@ -13,5 +13,6 @@ navLink.forEach((el) => el.addEventListener('click',closeMenu))
 function closeMenu(){
   if(event.target.classList.contains('nav-link')){
     navList.classList.remove('active')
+	headerBurger.classList.toggle('active')
   }
 }
