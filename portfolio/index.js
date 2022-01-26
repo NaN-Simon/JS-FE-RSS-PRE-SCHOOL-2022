@@ -16,6 +16,25 @@ function closeMenu(){
 	headerBurger.classList.toggle('active')
   }
 }
-
-const info = '\n-Вёрстка соответствует макету. Ширина экрана 768px +48\n-Ни на одном из разрешений до 320px включительно не появляется горизонтальная полоса прокрутки. Весь контент страницы при этом сохраняется: не обрезается и не удаляется +15\n-На ширине экрана 768рх и меньше реализовано адаптивное меню +22'
-console.log(info)
+/*BUTTONS*/
+//const buttonsPortfolio = document.querySelectorAll('.portfolio-btns')
+const buttonWinter = document.querySelector('.winter')
+buttonWinter.addEventListener('click',function(){
+  const porfolioImg = document.querySelectorAll('.portfolio-image')
+  porfolioImg.forEach((img,index)=>img.src = `./assets/img/portfolio/winter/${index + 1}.jpg`)
+})
+const buttonSpring = document.querySelector('.spring')
+buttonSpring.addEventListener('click',function(){
+  const porfolioImg = document.querySelectorAll('.portfolio-image')
+  porfolioImg.forEach((img,index)=>img.src = `./assets/img/portfolio/spring/${index + 1}.jpg`)
+})
+const buttonSummer = document.querySelector('.summer')
+buttonSummer.addEventListener('click',function(){
+  const porfolioImg = document.querySelectorAll('.portfolio-image')
+  porfolioImg.forEach((img,index)=>img.src = `./assets/img/portfolio/summer/${index + 1}.jpg`)
+})
+const buttonAutumn = document.querySelector('.autumn')
+buttonAutumn.addEventListener('click',function(){
+  const porfolioImg = document.querySelectorAll('.portfolio-image')
+  porfolioImg.forEach((img,index)=>img.src = `./assets/img/portfolio/autumn/${index + 1}.jpg`)
+})

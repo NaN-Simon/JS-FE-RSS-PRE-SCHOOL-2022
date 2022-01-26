@@ -411,7 +411,7 @@ ul.nav-list {
     color: #ffffff;
   }
 }
-.portfolio-buttons {
+.portfolio-btns {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -420,7 +420,7 @@ ul.nav-list {
   padding-top: 60px;
 }
 @media (max-width: 768px) {
-  .portfolio-buttons {
+  .portfolio-btns {
     justify-content: space-between;
     flex-wrap: wrap;
     width: 445px;
@@ -428,7 +428,7 @@ ul.nav-list {
   }
 }
 @media (max-width: 425px) {
-  .portfolio-buttons {
+  .portfolio-btns {
     width: 220px;
   }
 }
