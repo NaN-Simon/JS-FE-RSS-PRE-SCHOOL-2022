@@ -17,9 +17,12 @@ function closeMenu(){
   }
 }
 /*BUTTONS*/
-//const buttonsPortfolio = document.querySelectorAll('.portfolio-btns')
+const buttonsPortfolio = document.querySelectorAll('.portfolio-btns')
 const buttonWinter = document.querySelector('.winter')
 buttonWinter.addEventListener('click',function(){
+  document.querySelectorAll('.portfolio-btns .active').forEach(n => n.classList.remove('active'));
+  buttonsPortfolio.forEach(item => event.target.classList.add('active'))
+
   const porfolioImg = document.querySelectorAll('.portfolio-image')
   porfolioImg.forEach((img,index)=>img.src = `./assets/img/portfolio/winter/${index + 1}.jpg`)
 })
