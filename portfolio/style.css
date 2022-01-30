@@ -665,7 +665,7 @@ ul.nav-list {
   margin-top: 30px;
 }
 
-.footer {
+.footer-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -673,7 +673,7 @@ ul.nav-list {
   padding: 0 20px;
 }
 @media (max-width: 768px) {
-  .footer {
+  .footer-container {
     text-align: center;
     width: 210px;
     flex-wrap: wrap;
@@ -810,9 +810,6 @@ ul.nav-list {
   .header-burger.active span {
     transform: scale(0);
   }
-}
-.padding08 {
-  padding: 0 8px;
 }
 .light-theme {
   background-color: var(--color-white-background);

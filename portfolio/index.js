@@ -1,4 +1,4 @@
-/* import i18Obj from './assets/files/translate.js' */
+import i18Obj from './assets/files/translate.js'
 
 const headerBurger = document.querySelector('.header-burger')
 const navList = document.querySelector('.nav-list')
@@ -60,9 +60,9 @@ function getTranslate(lang){
   //document.getElementById('email').placeholder = i18Obj[lang][['e-mail'].dataset.i18]
 }
 
-
 /*CHECKBOX*/
 const formLang = document.querySelector('.form-lang')
+
 formLang.addEventListener('click',function(){
   const name = document.querySelector('[name=box]')
   if(name.checked){
@@ -70,30 +70,65 @@ formLang.addEventListener('click',function(){
     document.getElementById('email').placeholder = "Почта"
     document.getElementById('tel').placeholder = "Телефон"
     document.getElementById('textarea').placeholder = "Сообщение"
-    document.querySelectorAll('.nav-link').forEach(e => e.classList.toggle('padding08'))
+    navLink.forEach(e => e.style.padding = "0 11px")
   } else {getTranslate('en')
   document.getElementById('email').placeholder = "E-mail"
   document.getElementById('tel').placeholder = "Phone"
   document.getElementById('textarea').placeholder = "Message"}
-  document.querySelectorAll('.nav-link').forEach(e2 => e2.classList.toggle('padding08'))
 })
 
 /*LIGHT-THEME*/
-const toggleTheme = document.querySelector('.toggle-theme')
-toggleTheme.addEventListener('click',function(){
-  goLight()
-  toggleTheme.classList.toggle('toggle-theme-dark')
-  toggleTheme.classList.toggle('toggle-theme')
-  
+function addLight(){
+  const toLight = ['body','.skill-name','.skill-discription','.section-header-title','.light']
+  toLight.forEach(element => {document.querySelectorAll([element]).forEach(elem => elem.classList.add('light-theme'))
+  });
+  document.querySelectorAll(('.section-header-title'),'::before').forEach(el => el.classList.add('section-header-title-black'))
+  document.querySelectorAll('.footer').forEach(el => el.classList.add('dark-theme'))
+}
+function removeLight(){
+  const toLight = ['body','.skill-name','.skill-discription','.section-header-title','.light']
+  toLight.forEach(element => {document.querySelectorAll([element]).forEach(elem => elem.classList.remove('light-theme'))
+  });
+  document.querySelectorAll(('.section-header-title'),'::before').forEach(el => el.classList.remove('section-header-title-black'))
+  document.querySelectorAll('.footer').forEach(el => el.classList.remove('dark-theme'))
+}
 
-})
-const toLight = ['body','.skill-name','.skill-discription','.section-header-title','.light']
-function goLight(){
-  
+/* function goLight(){
+  const toLight = ['body','.skill-name','.skill-discription','.section-header-title','.light']
   toLight.forEach(element => {document.querySelectorAll([element]).forEach(elem => elem.classList.toggle('light-theme'))
   });
   document.querySelectorAll(('.section-header-title'),'::before').forEach(el => el.classList.toggle('section-header-title-black'))
   document.querySelectorAll('.footer').forEach(el => el.classList.toggle('dark-theme'))
+} */
+/* const toggleTheme = document.querySelector(".toggle-theme");
+    toggleTheme.addEventListener("click", function () {
+      goLight();
+      toggleTheme.classList.toggle("toggle-theme-dark");
+      toggleTheme.classList.toggle("toggle-theme");
+    }); */
+
+const toggleTheme = document.querySelector('.toggle-theme')
+toggleTheme.addEventListener("click", (event) => {
+  event.preventDefault();
+  if (localStorage.getItem("theme") === "light") {
+    localStorage.removeItem("theme");
+  } else {
+    localStorage.setItem("theme", "light");
+  }
+  addWhiteClassToHTML();
+});
+
+function addWhiteClassToHTML() {
+  try {
+    if (localStorage.getItem("theme") === "light") {
+      addLight();
+      //toggleTheme.classList.add("toggle-theme-dark");
+      //toggleTheme.classList.remove("toggle-theme");;
+    } else {
+      removeLight();
+      //toggleTheme.classList.add("toggle-theme-dark");
+      //toggleTheme.classList.remove("toggle-theme");;
+    }
+  } catch (err) {}
 }
-
-
+addWhiteClassToHTML();
