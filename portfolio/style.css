@@ -32,7 +32,7 @@ body {
   font-family: Inter-Regular;
 }
 .container {
-  min-width: 1440px; /* заменить на max-width, после review */
+  width: 1440px; /* заменить на max-width, после review */
   margin: 0 auto;
   min-height: 20px;
 }
@@ -58,7 +58,6 @@ body {
   .header-container {
     margin: 0;
   }
-  
 }
 .header-background {
   background-image: url("./assets/img/header/header-bg.jpg");
@@ -161,6 +160,27 @@ ul.nav-list {
   margin: 0 34px;
   font-size: 20px;
 }
+.toggle-theme {
+  background-image: url("./assets/svg/theme/sun.svg");
+  background-repeat: no-repeat;
+  margin-left: 31px;
+  width: 45px;
+  height: 45px;
+  transition: 0.4s;
+}
+.toggle-theme-dark {
+  background-image: url("./assets/svg/theme/moon.svg");
+  background-repeat: no-repeat;
+  margin-left: 31px;
+  width: 40px;
+  height: 40px;
+  transition: 0.4s;
+}
+.toggle-theme:hover,
+.toggle-theme-dark:hover {
+  filter: invert(24%) sepia(6%) saturate(1637%) hue-rotate(7deg) brightness(92%)
+    contrast(87%);
+}
 .hero {
   height: 820px;
   background-image: url("./assets/img/header/header-bg.jpg");
@@ -237,7 +257,6 @@ ul.nav-list {
     width: 260px;
   }
 }
-
 
 .btn {
   width: 220px;
@@ -747,7 +766,6 @@ ul.nav-list {
       width: 100%;
       padding-left: 60px;
     }
-  
   }
   .language {
     width: 66px;
@@ -793,25 +811,25 @@ ul.nav-list {
     transform: scale(0);
   }
 }
-.padding08{
+.padding08 {
   padding: 0 8px;
 }
-.light-theme{
+.light-theme {
   background-color: var(--color-white-background);
   color: var(--color-black-text);
 }
-.dark-theme{
+.dark-theme {
   background-color: var(--color-black-background);
   color: var(--color-white-text);
 }
 .light-theme:hover {
   color: #000;
 }
-.section-header-title-black {}
+.section-header-title-black {
+}
 .section-header-title-black::before,
 .section-header-title-black::after {
   background-color: var(--color-black-background);
-
 }
 .btn-active {
   width: 220px;

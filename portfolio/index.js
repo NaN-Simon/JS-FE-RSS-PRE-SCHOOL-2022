@@ -79,6 +79,14 @@ formLang.addEventListener('click',function(){
 })
 
 /*LIGHT-THEME*/
+const toggleTheme = document.querySelector('.toggle-theme')
+toggleTheme.addEventListener('click',function(){
+  goLight()
+  toggleTheme.classList.toggle('toggle-theme-dark')
+  toggleTheme.classList.toggle('toggle-theme')
+  
+
+})
 const toLight = ['body','.skill-name','.skill-discription','.section-header-title','.light']
 function goLight(){
   
@@ -87,5 +95,5 @@ function goLight(){
   document.querySelectorAll(('.section-header-title'),'::before').forEach(el => el.classList.toggle('section-header-title-black'))
   document.querySelectorAll('.footer').forEach(el => el.classList.toggle('dark-theme'))
 }
-goLight()
+
 
