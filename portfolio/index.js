@@ -1,4 +1,4 @@
-import i18Obj from './assets/files/translate.js'
+/* import i18Obj from './assets/files/translate.js' */
 
 const headerBurger = document.querySelector('.header-burger')
 const navList = document.querySelector('.nav-list')
@@ -77,3 +77,15 @@ formLang.addEventListener('click',function(){
   document.getElementById('textarea').placeholder = "Message"}
   document.querySelectorAll('.nav-link').forEach(e2 => e2.classList.toggle('padding08'))
 })
+
+/*LIGHT-THEME*/
+const toLight = ['body','.skill-name','.skill-discription','.section-header-title','.light']
+function goLight(){
+  
+  toLight.forEach(element => {document.querySelectorAll([element]).forEach(elem => elem.classList.toggle('light-theme'))
+  });
+  document.querySelectorAll(('.section-header-title'),'::before').forEach(el => el.classList.toggle('section-header-title-black'))
+  document.querySelectorAll('.footer').forEach(el => el.classList.toggle('dark-theme'))
+}
+goLight()
+

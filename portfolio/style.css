@@ -20,10 +20,15 @@ html {
 }
 :root {
   --color-gold: #bdae82;
+  --color-black-background: #000000;
+  --color-white-background: #ffffff;
+  --color-black-text: #000000;
+  --color-white-text: #ffffff;
 }
+
 body {
-  background-color: #000000;
-  color: #ffffff;
+  background-color: var(--color-black-background);
+  color: var(--color-white-text);
   font-family: Inter-Regular;
 }
 .container {
@@ -247,19 +252,7 @@ ul.nav-list {
   cursor: pointer;
   transition: 0.8s;
 }
-.btn-active {
-  width: 220px;
-  height: 55px;
-  font-family: inherit;
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 40px;
-  border: 0;
-  background-color: var(--color-gold);
-  color: #ffffff;
-  cursor: pointer;
-  transition: 0.8s;
-}
+
 .btn:hover,
 .btn-active:hover {
   color: #ffffff;
@@ -285,6 +278,7 @@ ul.nav-list {
   color: var(--color-gold);
   align-items: center;
 }
+
 @media (max-width: 768px) {
   .section-header-title {
     padding-top: 61px;
@@ -651,22 +645,7 @@ ul.nav-list {
 .contacts-btn {
   margin-top: 30px;
 }
-.header-title-contact {
-  width: 450px;
-  margin-bottom: 40px;
-  padding-top: 0px;
-}
-@media (max-width: 768px) {
-  .header-title-contact {
-    margin-bottom: 23px;
-    padding-top: 32px;
-    justify-content: center;
-  }
-}
-.header-title-contact::after,
-.header-title-contact::before {
-  content: none;
-}
+
 .footer {
   display: flex;
   justify-content: space-between;
@@ -816,4 +795,52 @@ ul.nav-list {
 }
 .padding08{
   padding: 0 8px;
+}
+.light-theme{
+  background-color: var(--color-white-background);
+  color: var(--color-black-text);
+}
+.dark-theme{
+  background-color: var(--color-black-background);
+  color: var(--color-white-text);
+}
+.light-theme:hover {
+  color: #000;
+}
+.section-header-title-black {}
+.section-header-title-black::before,
+.section-header-title-black::after {
+  background-color: var(--color-black-background);
+
+}
+.btn-active {
+  width: 220px;
+  height: 55px;
+  font-family: inherit;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 40px;
+  border: 0;
+  background-color: var(--color-gold);
+  color: #ffffff;
+  cursor: pointer;
+  transition: 0.8s;
+}
+.header-title-contact {
+  width: 450px;
+  margin-bottom: 40px;
+  padding-top: 0px;
+  color: var(--color-gold);
+  background: none;
+}
+@media (max-width: 768px) {
+  .header-title-contact {
+    margin-bottom: 23px;
+    padding-top: 32px;
+    justify-content: center;
+  }
+}
+.header-title-contact::after,
+.header-title-contact::before {
+  content: none;
 }
