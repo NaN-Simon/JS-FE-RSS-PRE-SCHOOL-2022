@@ -1,4 +1,4 @@
-console.log('translate page has ON')
+//console.log('translate page has ON')
 const i18Obj = {
   'en': {
     'skills': 'Skills',

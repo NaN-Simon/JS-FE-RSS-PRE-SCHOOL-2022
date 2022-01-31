@@ -8,6 +8,11 @@ headerBurger.addEventListener('click',function(){
   headerBurger.classList.toggle('active')
   navList.classList.toggle('active')
   body.classList.toggle('lock')
+  if(headerBurger.classList.contains('active') && (localStorage.getItem("theme") === "light")){
+    headerBurger.classList.add('header-burger-black')
+  } else {
+    headerBurger.classList.remove('header-burger-black')
+  }
 })
 
 navLink.forEach((el) => el.addEventListener('click',closeMenu))
@@ -54,45 +59,93 @@ function addActiveThis(){
 
 /*LANGUAGES */
 const datai18 = document.querySelectorAll('*[data-i18]')
+const formLang = document.querySelector('.form-lang')
 function getTranslate(lang){
   datai18.forEach(elem => elem.textContent = i18Obj[lang][elem.dataset.i18])
-
-  //document.getElementById('email').placeholder = i18Obj[lang][['e-mail'].dataset.i18]
 }
-
-/*CHECKBOX*/
-const formLang = document.querySelector('.form-lang')
-
-formLang.addEventListener('click',function(){
-  const name = document.querySelector('[name=box]')
-  if(name.checked){
-    getTranslate('ru')
-    document.getElementById('email').placeholder = "Почта"
-    document.getElementById('tel').placeholder = "Телефон"
-    document.getElementById('textarea').placeholder = "Сообщение"
-    navLink.forEach(e => e.style.padding = "0 11px")
-  } else {getTranslate('en')
+function addRU(){
+  getTranslate('ru')
+  document.getElementById('email').placeholder = "Почта"
+  document.getElementById('tel').placeholder = "Телефон"
+  document.getElementById('textarea').placeholder = "Сообщение"
+  navLink.forEach(e => e.style.padding = "0 11px")
+}
+function addEN(){
+  getTranslate('en')
   document.getElementById('email').placeholder = "E-mail"
   document.getElementById('tel').placeholder = "Phone"
-  document.getElementById('textarea').placeholder = "Message"}
-})
+  document.getElementById('textarea').placeholder = "Message"
+}
+const name = document.querySelector('[name=box]')
+formLang.addEventListener('click',function(){
+  if(name.checked){
+    addRU()
+  } else {
+    addEN()
+  }
+  //localStorage
+  if (localStorage.getItem("lang") === "ru") {
+    localStorage.removeItem("lang")
+  } else {
+      localStorage.setItem("lang", "ru");
+    }
+    //changeLanguageToHTML()
+  })
+  function changeLanguageToHTML() {
+    try {
+      if (localStorage.getItem("lang") === "ru") {
+        addRU();
+        name.setAttribute("checked", "checked")
+      } else {
+        addEN();
+      }
+    } catch (err) {}
+  }
+  changeLanguageToHTML();
 
 /*LIGHT-THEME*/
+
 function addLight(){
   const toLight = ['body','.skill-name','.skill-discription','.section-header-title','.light']
   toLight.forEach(element => {document.querySelectorAll([element]).forEach(elem => elem.classList.add('light-theme'))
   });
   document.querySelectorAll(('.section-header-title'),'::before').forEach(el => el.classList.add('section-header-title-black'))
   document.querySelectorAll('.footer').forEach(el => el.classList.add('dark-theme'))
+  if(window.screen.width <= 768){
+    navList.style.background = "#ffffff"
+    navLink.forEach(el=>{el.style.color = "#000000"})
+  }
+  window.addEventListener('resize', function(){
+    if(window.screen.width <= 768){
+      navList.style.background = "#ffffff";
+      navLink.forEach(el=>el.style.color = "#000000")
+    }else{
+      navList.style.background = "none";
+      navLink.forEach(el=>el.style.color = "#ffffff")
+    }
+})
 }
 function removeLight(){
-  const toLight = ['body','.skill-name','.skill-discription','.section-header-title','.light']
+  const toLight = ['body','.skill-name','.skill-discription','.section-header-title','ul.nav-list.active','.light']
   toLight.forEach(element => {document.querySelectorAll([element]).forEach(elem => elem.classList.remove('light-theme'))
   });
   document.querySelectorAll(('.section-header-title'),'::before').forEach(el => el.classList.remove('section-header-title-black'))
   document.querySelectorAll('.footer').forEach(el => el.classList.remove('dark-theme'))
+  headerBurger.classList.remove('header-burger-black')
+  if(window.screen.width <= 768){
+    navList.style.background = "#000000"
+    navLink.forEach(el=>{el.style.color = "#ffffff"})
+  }
+  window.addEventListener('resize', function(){
+    if(window.screen.width <= 768){
+      navList.style.background = "#000000";
+      navLink.forEach(el=>el.style.color = "#ffffff")
+    }else{
+      navList.style.background = "none"
+      navLink.forEach(el=>el.style.color = "#ffffff")
+    }
+})
 }
-
 /* function goLight(){
   const toLight = ['body','.skill-name','.skill-discription','.section-header-title','.light']
   toLight.forEach(element => {document.querySelectorAll([element]).forEach(elem => elem.classList.toggle('light-theme'))
@@ -115,20 +168,18 @@ toggleTheme.addEventListener("click", (event) => {
   } else {
     localStorage.setItem("theme", "light");
   }
-  addWhiteClassToHTML();
+  addLightClassToHTML();
 });
 
-function addWhiteClassToHTML() {
+function addLightClassToHTML() {
   try {
     if (localStorage.getItem("theme") === "light") {
       addLight();
-      //toggleTheme.classList.add("toggle-theme-dark");
-      //toggleTheme.classList.remove("toggle-theme");;
     } else {
       removeLight();
-      //toggleTheme.classList.add("toggle-theme-dark");
-      //toggleTheme.classList.remove("toggle-theme");;
     }
   } catch (err) {}
 }
-addWhiteClassToHTML();
+addLightClassToHTML();
+
+console.log('1.Смена изображений в секции portfolio +25\n2.Перевод страницы на два языка +25\n3.Переключение светлой и тёмной темы +25\n4.Дополнительный функционал +5\n5.Дополнительный функционал: сложные эффекты для кнопок при наведении и/или клике +5')
