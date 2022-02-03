@@ -20,10 +20,11 @@ body {
   width: 100%;
   position: absolute;
   z-index: 0;
+  filter: blur(7px);
 }
 .sub-player {
   width: 400px;
-  background: linear-gradient(45deg, #4a644a 10%, #263e26 60%, #192419);
+  background: linear-gradient(45deg, #4a644a 10%, #263826 60%, #192419);
   border-radius: 0 0 25px 25px;
 }
 .sub-player {
@@ -38,6 +39,7 @@ body {
   background: transparent;
   outline: none;
   transition: 0.65s;
+  filter: contrast(0.3);
 }
 .button:hover {
   filter: invert();
@@ -83,18 +85,34 @@ body {
 /* SLIDER */
 .slider {
   position: relative;
+  margin-top: 20px;
+}
+.slider::-ms-thumb{
+  appearance: none;
 }
 .duration-time {
   position: absolute;
-  top: 0%;
+  top: -260%;
   right: 0%;
+  font-size: 16px;
+  color: #adadad;
 }
 .progress-bar {
   width: 350px;
-  height: 55px;
+  height: 7px;
+  appearance: none;
+  border-radius: 3px;
+  background-color: #adadad;
+}
+.progress{
+  width: 0px;
+  height: 7px;
+  background-color: #217221;
 }
 .current-time {
   position: absolute;
-  top: 70%;
+  top: 116%;
   left: 0%;
+  font-size: 16px;
+  color: #adadad;
 }
