@@ -14,7 +14,6 @@ const currentTime = document.querySelector('.current-time')
 const progressBar = document.querySelector('.progress-bar')
 
 const songs = ['Beyonce - Don\'t Hurt Yourself','assets audio dontstartnow']
-c1(songs)
 let songIndex = 0;
 
 /* playBtn.addEventListener("click", () => {
@@ -44,5 +43,23 @@ playPauseBtn.addEventListener('click',()=>{
     pauseSong()
   } else{
     playSong()
+  }
+})
+//next
+c1(songs.length)
+c1(songIndex+1)
+c1(songs.length==songIndex+1)
+next.addEventListener('click',()=>{
+  if(songs.length!=songIndex+1){
+    songIndex += 1;
+    loadSong(songs[songIndex])
+  }
+  
+})
+//prev
+prev.addEventListener('click',()=>{
+  if(songIndex != 0){
+    songIndex -= 1;
+    loadSong(songs[songIndex])
   }
 })
