@@ -48,7 +48,8 @@ playPauseBtn.addEventListener("click", () => {
 });
 
 //next
-next.addEventListener("click", () => {
+next.addEventListener("click", nextSong);
+function nextSong(){
   if (songIndex + 1 == songs.length) {
     songIndex = 0;
   } else {
@@ -56,10 +57,11 @@ next.addEventListener("click", () => {
   }
   loadSong(songs[songIndex]);
   playSong();
-});
+}
 
 //prev
-prev.addEventListener("click", () => {
+prev.addEventListener("click", prevSong);
+function prevSong(){
   if (songIndex == 0) {
     songIndex = songs.length - 1;
   } else {
@@ -67,12 +69,26 @@ prev.addEventListener("click", () => {
   }
   loadSong(songs[songIndex]);
   playSong();
-});
-
+}
 //progress bar
 function updateProgress(e){
   const {duration,currentTime} = e.srcElement
   const progressProcent = (currentTime/duration)*100
   progress.style.width = `${progressProcent}%`
 }
+
 audio.addEventListener('timeupdate',updateProgress)
+//timer
+
+
+//set Progress
+function setProgress(e){
+  const width = this.clientWidth
+  const clickWidthX = e.offsetX
+  const widthProcent = (clickWidthX/width)
+  audio.currentTime = (clickWidthX / width)* audio.duration
+}
+progressBar.addEventListener('click',setProgress)
+
+//autoPlay
+audio.addEventListener('ended',nextSong)
