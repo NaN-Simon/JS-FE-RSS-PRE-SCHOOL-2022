@@ -13,17 +13,29 @@ const durationTime = document.querySelector(".duration-time");
 const currentTime = document.querySelector(".current-time");
 const progressBar = document.querySelector(".progress-bar");
 const progress = document.querySelector(".progress");
+const progressDot = document.querySelector('.progress-dot')
 const background = document.querySelector(".background");
 
 
-const songs = ["Beyonce - Don't Hurt Yourself", "assets audio dontstartnow"];
+const songs = [
+"Beyonce - Don't Hurt Yourself", 
+"assets audio dontstartnow",
+"S3RL –  MTC","S3RL - PikaGirl",
+"You Are Mine - S3RL ft Kayliana"
+];
 let songIndex = 0;
 
 function loadSong(song) {
   songTitle.innerHTML = song;
   audio.src = `./assets/music/${song}.mp3`;
-  coverPng.src = `./assets/images/cover${songIndex}.png`;
+  if(songIndex<2){
+    coverPng.src = `./assets/images/cover${songIndex}.png`;
   background.src = `./assets/images/cover${songIndex}.png`;
+  } else {
+    coverPng.src = './assets/images/cover-deafult.png'
+    background.src = './assets/images/cover-deafult.png'
+  }
+  
 }
 loadSong(songs[songIndex]);
 
@@ -32,17 +44,23 @@ function playSong() {
   supPlayer.classList.add(".play");
   audio.play();
   PlayPauseImgSrc.src = "./assets/icons/pause.png";
+  document.querySelector('.cover-png').classList.add('scale')
+  progressDot.style.opacity = '1'
 }
 function pauseSong() {
   supPlayer.classList.remove(".play");
   audio.pause();
   PlayPauseImgSrc.src = "./assets/icons/play.png";
+  document.querySelector('.cover-png').classList.remove('scale')
+  progressDot.style.opacity = '0'
 }
 playPauseBtn.addEventListener("click", () => {
   const isPlay = supPlayer.classList.contains(".play");
   if (isPlay) {
+    
     pauseSong();
   } else {
+    
     playSong();
   }
 });
@@ -75,11 +93,30 @@ function updateProgress(e){
   const {duration,currentTime} = e.srcElement
   const progressProcent = (currentTime/duration)*100
   progress.style.width = `${progressProcent}%`
+  progressDot.style.left = `${progressProcent}%`
 }
-
 audio.addEventListener('timeupdate',updateProgress)
-//timer
 
+//timer duration
+function showTime(time){
+  let result = ""
+  time = Math.floor(time)
+  let hours = (Math.floor(time/60/60))
+  let minutes = (Math.floor(time/60)-(hours*60))
+  let seconds = (time % 60)
+  let timeResult = hours+":"+minutes+":"+seconds
+  if (hours != 0){result += hours+":"}
+  if (minutes != 0){result += minutes.toString().padStart(2,'0')+":"} else {result += "00:"}
+  if (seconds != 0){result += seconds.toString().padStart(2,'0')} else {result += "00"}
+  return result
+  }
+  audio.addEventListener('loadeddata',()=>{
+    durationTime.innerHTML = showTime(audio.duration)
+  })
+//timer currentTime
+setInterval(()=>{
+  currentTime.textContent = showTime(audio.currentTime);
+},500);
 
 //set Progress
 function setProgress(e){
