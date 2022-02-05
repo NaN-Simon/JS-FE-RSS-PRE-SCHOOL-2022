@@ -20,7 +20,8 @@ const background = document.querySelector(".background");
 const songs = [
 "Beyonce - Don't Hurt Yourself", 
 "assets audio dontstartnow",
-"S3RL –  MTC","S3RL - PikaGirl",
+"S3RL –  MTC",
+"S3RL - PikaGirl",
 "You Are Mine - S3RL ft Kayliana"
 ];
 let songIndex = 0;
@@ -40,6 +41,7 @@ function loadSong(song) {
 loadSong(songs[songIndex]);
 
 //play
+audio.volume = '0.1'
 function playSong() {
   supPlayer.classList.add(".play");
   audio.play();
