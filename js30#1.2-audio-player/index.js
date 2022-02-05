@@ -129,3 +129,15 @@ progressBar.addEventListener('click',setProgress)
 
 //autoPlay
 audio.addEventListener('ended',nextSong)
+
+//volume
+volumeLine = document.querySelector('.volume-line')
+volumeMean = document.querySelector('.volume-mean')
+function setVolume(e){
+  const width = this.clientWidth
+  const clickWidthX = e.offsetX
+  const widthProcent = (clickWidthX/width)
+  audio.volume = (clickWidthX / width)
+  volumeMean.style.width = `${(clickWidthX/width)*100}%`
+}
+volumeLine.addEventListener('click',setVolume)
