@@ -3,7 +3,7 @@ body {
   padding: 0;
   box-sizing: border-box;
   position: relative;
-  background-color: #263e26;
+  background-color: #000000;
   scroll-behavior: smooth;
 }
 .container {
@@ -17,9 +17,21 @@ body {
   position: relative;
   z-index: 5;
 }
-.background {
-  width: 100%;
+.background-container {
   position: absolute;
+  overflow: hidden;
+  width: 100%;
+  height: 692px;
+}
+.background {
+  position: absolute;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1200px;
+  height: 670px;
+  object-fit: cover;
   z-index: 0;
   filter: blur(7px);
 }
@@ -36,7 +48,7 @@ body {
   align-items: center;
   height: 145px;
   width: 400px;
-  background: linear-gradient(45deg, #4a644a 10%, #263826 60%, #192419);
+  background: linear-gradient(45deg, #2f9fe1 10%, #231d74 60%, #3927a4);
   border-radius: 0 0 25px 25px;
 }
 
