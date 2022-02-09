@@ -1,21 +1,59 @@
-
-const urlImg = 'https://api.unsplash.com/search/photos?query=spring&client_id=SouHY7Uul-OxoMl3LL3c0NkxUtjIrKwf3tsGk1JaiVo'
-async function getData(){
-  const res = await fetch(urlImg)
-  const data = await res.json()
+let searchRequest = "red";
+let dataLinks = [];
+async function getData() {
+  let urlImg = `https://api.unsplash.com/search/photos?query=${searchRequest}&orientation=landscape&client_id=Rqwr3LoRH3LrwkgPzK9gvit4-j9yeXTfsd0qIZjddls`;
+  //console.log('loading...')
+  try{
+    const res = await fetch(urlImg);
+  const data = await res.json();
+  dataLinks = [];
   //console.log(data)
-  Object.keys(data.results).forEach((element,index) => {
-    //console.log(data.results[index].urls.regular )
-  })
+  Object.keys(data.results).forEach((element, index) => {
+    dataLinks.push(data.results[index].urls.regular);
+  });
+  } catch (err){
+    console.log('error: ',err)
+    noPicture()
+  }
+  
+  
+  getImage();
 }
-getData()
+getData();
 
-/* TEST */
-const span = document.querySelector('.arr-img span')
-console.log(span.textContent)
-
+const arrImg = document.querySelector(".arr-img");
 /*pic*/
-const img = document.querySelectorAll('.arr-img img')
-img.forEach(element => {
-  element.src = " "
+function getImage() {
+  arrImg.innerHTML = "";
+  const img = document.querySelectorAll(".arr-img img");
+  try {
+    for (let i = 0; i < dataLinks.length; i++) {
+      const imgPlus = document.createElement("img");
+      imgPlus.src = dataLinks[i];
+      arrImg.append(imgPlus);
+    }
+  } catch (err) {
+    console.log('error: '+err);
+  }
+  
+  if(dataLinks.length == 0){
+    noPicture()
+  }
+}
+
+function toRequest() {}
+const form = document.querySelector(".form");
+const input = document.querySelector(".footer-search-input");
+const button = document.querySelector(".button-search");
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
+  searchRequest = input.value;
+  console.log('Your request: '+input.value);
+  getData();
 });
+
+function noPicture(nosignal){
+  const imgPlus = document.createElement("img");
+      imgPlus.src = 'nopic.jpg';
+      arrImg.append(imgPlus)
+}

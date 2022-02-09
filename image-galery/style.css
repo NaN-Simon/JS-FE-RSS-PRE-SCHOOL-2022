@@ -39,6 +39,14 @@ h1.footer-name {
   justify-content: center;
 }
 .arr-img img {
-  padding: 10px;
-  width: 500px;
+  padding: 15px;
+  width: 50%;
 }
+@media (max-width: 500px){
+.arr-img img {
+    width:300px;
+  }
+}
+  
+  
+
