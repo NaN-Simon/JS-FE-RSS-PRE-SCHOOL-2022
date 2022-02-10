@@ -14,7 +14,7 @@ body {
   background-color: #000000;
   color: #ffffff;
 }
-.footer {
+.header {
   width: 100%;
   min-height: 50px;
   display: flex;
@@ -23,15 +23,38 @@ body {
   padding: 0 20px;
   border-bottom: 2px solid #3d76f3;
 }
-h1.footer-name {
+h1.header-name {
   color: #3d76f3;
 }
-.footer-search-input {
+.header-search-input {
   width: 160px;
   height: 20px;
   border-radius: 10px;
   padding: 0 10px;
+  margin-right: 20px;
 }
+.form{
+  display: flex;
+}
+.search-reset{
+  position: relative;
+}
+.search-reset::before,
+.search-reset::after{
+  content: "";
+  position: absolute;
+  width: 13px;
+  height: 3px;
+  background-color: #000000;
+  right: 28px;
+  top: 9px;
+  transform: rotate(45deg);
+  cursor: pointer;
+}
+.search-reset::after{
+  transform: rotate(-45deg);
+}
+
 .arr-img {
   display: flex;
   flex-wrap: wrap;

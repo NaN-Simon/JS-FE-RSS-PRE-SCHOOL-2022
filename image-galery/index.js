@@ -1,4 +1,4 @@
-let searchRequest = "red";
+let searchRequest = "black";
 let dataLinks = [];
 async function getData() {
   let urlImg = `https://api.unsplash.com/search/photos?query=${searchRequest}&orientation=landscape&client_id=Rqwr3LoRH3LrwkgPzK9gvit4-j9yeXTfsd0qIZjddls`;
@@ -43,7 +43,7 @@ function getImage() {
 
 function toRequest() {}
 const form = document.querySelector(".form");
-const input = document.querySelector(".footer-search-input");
+const input = document.querySelector(".header-search-input");
 const button = document.querySelector(".button-search");
 form.addEventListener("submit", (event) => {
   event.preventDefault();
@@ -51,6 +51,10 @@ form.addEventListener("submit", (event) => {
   console.log('Your request: '+input.value);
   getData();
 });
+
+document.querySelector('.search-reset').addEventListener('click',()=>{
+  input.value = ""
+})
 
 function noPicture(nosignal){
   const imgPlus = document.createElement("img");
