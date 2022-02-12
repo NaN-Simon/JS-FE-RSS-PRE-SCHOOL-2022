@@ -12,7 +12,7 @@ async function getData() {
     dataLinks.push(data.results[index].urls.regular);
   });
   } catch (err){
-    console.log('error: ',err)
+    console.log('error, 403 - Too many request: ',err)
     noPicture()
   }
   
@@ -38,6 +38,7 @@ function getImage() {
   
   if(dataLinks.length == 0){
     noPicture()
+    console.log('Image not found in API');
   }
 }
 
