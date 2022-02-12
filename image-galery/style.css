@@ -1,9 +1,17 @@
+@font-face {
+  font-family: Inter-Regular;
+  src: url("./font/Inter-Regular.ttf");
+}
 *,
 *::after,
 *::before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+:root {
+  --main-color: #3d76f3;
+  --hover-color: #bdae82;
 }
 .container {
   max-width: 1440px;
@@ -13,6 +21,7 @@
 body {
   background-color: #000000;
   color: #ffffff;
+  font-family: Inter-Regular;
 }
 .header {
   width: 100%;
@@ -21,10 +30,19 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 0 20px;
-  border-bottom: 2px solid #3d76f3;
+  border-bottom: 2px double var(--main-color);
+}
+
+@media (max-width: 350px) {
+  .header {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
 h1.header-name {
-  color: #3d76f3;
+  font-size: 26px;
+  color: var(--main-color);
+  cursor: default;
 }
 .header-search-input {
   width: 160px;
@@ -33,14 +51,14 @@ h1.header-name {
   padding: 0 10px;
   margin-right: 20px;
 }
-.form{
+.form {
   display: flex;
 }
-.search-reset{
+.search-reset {
   position: relative;
 }
 .search-reset::before,
-.search-reset::after{
+.search-reset::after {
   content: "";
   position: absolute;
   width: 13px;
@@ -51,7 +69,7 @@ h1.header-name {
   transform: rotate(45deg);
   cursor: pointer;
 }
-.search-reset::after{
+.search-reset::after {
   transform: rotate(-45deg);
 }
 
@@ -65,11 +83,47 @@ h1.header-name {
   padding: 15px;
   width: 50%;
 }
-@media (max-width: 500px){
-.arr-img img {
-    width:300px;
+@media (max-width: 500px) {
+  .arr-img img {
+    width: 300px;
   }
 }
-  
-  
+.footer {
+  width: 100%;
+  min-height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  border-top: 2px double var(--main-color);
+}
 
+.rs-school {
+  background-image: url("./svg/rs_school_js.svg");
+  background-repeat: no-repeat;
+  width: 75px;
+  height: 27.75px;
+  transition: 0.4s;
+  filter: invert(100%) sepia(1%) saturate(100%) hue-rotate(10deg)
+    brightness(100%) contrast(100%);
+}
+.rs-school:hover {
+  filter: invert(24%) sepia(6%) saturate(1637%) hue-rotate(7deg) brightness(92%)
+    contrast(87%);
+}
+
+.footer-data {
+  display: flex;
+  width: 190px;
+  gap: 10px;
+  color: var(--main-color);
+  cursor: default;
+}
+.footer-data a:hover {
+  color: var(--hover-color);
+}
+.footer-data a {
+  color: var(--main-color);
+  text-decoration: none;
+  cursor: pointer;
+}
